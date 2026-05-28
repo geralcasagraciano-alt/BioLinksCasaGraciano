@@ -10,23 +10,45 @@
         margin: 0;
         padding: 0;
         font-family: 'Segoe UI', sans-serif;
-        background: linear-gradient(135deg, #1e3c72, #2a5298);
+        background: #0d1117;
+        color: white;
         display: flex;
         justify-content: center;
         align-items: center;
         min-height: 100vh;
-        color: white;
+    }
+
+    .container {
+        width: 90%;
+        max-width: 450px;
+        text-align: center;
+        position: relative;
+    }
+
+    /* LOGO EM MARCA DE ÁGUA */
+    .logo-bg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 260px;
+        height: 260px;
+        opacity: 0.08;
+        transform: translate(-50%, -50%);
+        background-image: url('https://casagraciano.pt/wp-content/uploads/2024/05/cropped-logo-casa-graciano.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        pointer-events: none;
     }
 
     .card {
-        background: rgba(255, 255, 255, 0.12);
+        background: rgba(255, 255, 255, 0.06);
         backdrop-filter: blur(12px);
         padding: 40px 30px;
         border-radius: 20px;
-        width: 90%;
-        max-width: 420px;
-        text-align: center;
-        box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+        box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+        position: relative;
+        z-index: 2;
         animation: fadeIn 0.8s ease;
     }
 
@@ -45,8 +67,6 @@
 
     .btn {
         display: block;
-        background: white;
-        color: #1e3c72;
         padding: 15px;
         margin: 12px 0;
         border-radius: 12px;
@@ -54,12 +74,22 @@
         font-size: 18px;
         font-weight: 600;
         transition: 0.25s;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.25);
     }
+
+    /* CORES OFICIAIS */
+    .btn-site { background: #ffffff; color: #0d1117; }
+    .btn-maps { background: #4285F4; color: white; }
+    .btn-insta { 
+        background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+        color: white;
+    }
+    .btn-face { background: #1877F2; color: white; }
+    .btn-whats { background: #25D366; color: white; }
 
     .btn:hover {
         transform: translateY(-3px);
-        box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+        box-shadow: 0 6px 18px rgba(0,0,0,0.35);
     }
 
     @keyframes fadeIn {
@@ -71,14 +101,19 @@
 
 <body>
 
-<div class="card">
-    <h1>Casa Graciano</h1>
-    <p>Ligações Oficiais</p>
+<div class="container">
+    <div class="logo-bg"></div>
 
-    <a class="btn" href="https://maps.app.goo.gl/wqUyeAAbam7U8r5i7" target="_blank">📍 Localização</a>
-    <a class="btn" href="https://www.instagram.com/casagraciano.pt/" target="_blank">📸 Instagram</a>
-    <a class="btn" href="https://www.facebook.com/casagraciano2016.pt/?locale=pt_PT" target="_blank">📘 Facebook</a>
-    <a class="btn" href="https://wa.me/351927568875" target="_blank">💬 WhatsApp Encomendas</a>
+    <div class="card">
+        <h1>Casa Graciano</h1>
+        <p>Sesimbra • Ligações Oficiais</p>
+
+        <a class="btn btn-site" href="https://casagraciano.pt" target="_blank">🌐 Site Oficial</a>
+        <a class="btn btn-maps" href="https://maps.app.goo.gl/wqUyeAAbam7U8r5i7" target="_blank">📍 Localização</a>
+        <a class="btn btn-insta" href="https://www.instagram.com/casagraciano.pt/" target="_blank">📸 Instagram</a>
+        <a class="btn btn-face" href="https://www.facebook.com/casagraciano2016.pt/?locale=pt_PT" target="_blank">📘 Facebook</a>
+        <a class="btn btn-whats" href="https://wa.me/351927568875" target="_blank">💬 WhatsApp Encomendas</a>
+    </div>
 </div>
 
 </body>
